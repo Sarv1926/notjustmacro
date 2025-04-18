@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 setup(
     name="PWTLoader",
-    version="0.1",
+    version="0.1.1",
     description="A lightweigh loader for data from Penn World Table datasets via Dataverse",
     author="Sarvesh Ingle",
     author_email="ingle.sarvesh1926@gmail.com",
@@ -10,7 +10,7 @@ setup(
    install_requires=[
     "pandas",
     "beautifulsoup4",
-    "html5lib",
+    "xml",
     "requests"
 ],
     classifiers=[

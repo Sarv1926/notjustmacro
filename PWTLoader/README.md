@@ -2,6 +2,10 @@
 
 **PWTLoader** is a Python Package built as a lightweight loader for the main .dta file as well as additional .dta files from the Penn World Tables datasets hosted at dataverse into a pandas pd. 
 
+This project uses data from the **Penn World Table (PWT), version 10.01**, developed by  
+**Robert C. Feenstra, Robert Inklaar, and Marcel P. Timmer**  
+at the **Groningen Growth and Development Centre**.
+
 ## Features
 
 - Allows the download of the latest Penn World Table data from the dataverse
