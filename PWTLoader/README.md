@@ -74,7 +74,11 @@ at the **Groningen Growth and Development Centre**.
 
 ## Installation
 
-You can install PWTLoader directly via pip from Github;
+You can install PWTLoader directly via pip;
+```bash
+pip install PWTLoader=0.1.1
+```
+Or You can install PWTLoader directly via pip using Github;
 ```bash
 pip install git+https://github.com/Sarv1926/notjustmacro/PWTLoader.git
 ```
