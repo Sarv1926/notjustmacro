@@ -19,7 +19,7 @@ setup(
     ],
     python_requires='>=3.7',
     license="MIT",
-    long_description=open('README.md').read(),
+    long_description=open('README.md',encoding='utf-8').read(),
     long_description_content_type='text/markdown',
     keywords="pwt, penn world table, economics, data loader, econometrics"
 )
