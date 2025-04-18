@@ -20,7 +20,7 @@ class PWTLoader():
             content=response.text
 
             #Parse HTML and extract JSON-LD Metadata
-            soup=BeautifulSoup(content,"xml")
+            soup=BeautifulSoup(content,"lxml")
             json_ld_tag=soup.find("script",{"type": "application/ld+json"})
             json_ld=json.loads(json_ld_tag.string)
             datasets=json_ld["distribution"]
