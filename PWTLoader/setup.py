@@ -10,7 +10,7 @@ setup(
    install_requires=[
     "pandas",
     "beautifulsoup4",
-    "xml",
+    "lxml",
     "requests"
 ],
     classifiers=[
