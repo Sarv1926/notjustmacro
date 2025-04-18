@@ -17,10 +17,10 @@ at the **Groningen Growth and Development Centre**.
 Here's an example of how to run PWTLoader
 
 ```python
-from PWTLoader import PWTloader
+from PWTLoader import PWTLoader
 
 # Create an instance of the loader
-pwt = PWTloader()
+pwt = PWTLoader()
 
 # Load the main dataset
 df = pwt.load_data()
@@ -116,6 +116,7 @@ pip install -r PWTLoader/requirements.txt
 - Python 3.7 or higher
 - pandas
 - requests
+- lxml
 - beautifulsoup4
 - html5lib
 
