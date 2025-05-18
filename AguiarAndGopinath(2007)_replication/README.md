@@ -22,9 +22,9 @@ The estimation is done by minimizing the loss function between empirical and sim
 ## Components
 
 - `main_script.py`: Python script that automates the entire process (data loading, moment calculation, GMM estimation).
-- `ag3.mod`: A modified Dynare implementation of the Aguiar & Gopinath (2007) model. Based on the version by Jonathan Pfeifer ([link](https://github.com/JohannesPfeifer/DSGE_mod)).
+- `aguiar_gopinath_soe.mod`: A modified Dynare implementation of the Aguiar & Gopinath (2007) model. Based on the version by Jonathan Pfeifer ([link](https://github.com/JohannesPfeifer/DSGE_mod)).
 - `LICENSE`: GNU General Public License v3.
-- `param2.m`: Parameter file written by Python, used by Dynare in each run.
+- `param.m`: Parameter file written by Python, used by Dynare in each run.
 
 ## 🛠️ Requirements
 
