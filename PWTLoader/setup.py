@@ -1,7 +1,10 @@
 from setuptools import setup, find_packages
+
+with open('README.md', encoding="utf-8") as f:
+    long_description = f.read()
 setup(
     name="PWTLoader",
-    version="0.1.1",
+    version="0.2.4",
     description="A lightweigh loader for data from Penn World Table datasets via Dataverse",
     author="Sarvesh Ingle",
     author_email="ingle.sarvesh1926@gmail.com",
@@ -10,8 +13,9 @@ setup(
    install_requires=[
     "pandas",
     "beautifulsoup4",
-    "xml",
-    "requests"
+    "lxml",
+    "requests",
+    "html5lib"
 ],
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -19,7 +23,7 @@ setup(
     ],
     python_requires='>=3.7',
     license="MIT",
-    long_description=open('README.md').read(),
+    long_description=long_description,
     long_description_content_type='text/markdown',
     keywords="pwt, penn world table, economics, data loader, econometrics"
 )

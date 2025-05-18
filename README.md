@@ -12,29 +12,6 @@ at the **Groningen Growth and Development Centre**.
 - Parse and preprocess data for further economic analysis.
 - Work with data in pandas `DataFrame` format.
 
-## Example 
-
-Here's an example of how to run PWTLoader
-
-```python
-from PWTLoader import PWTLoader
-
-# Create an instance of the loader
-pwt = PWTLoader()
-
-# Load the main dataset
-df = pwt.load_data()
-
-# If you want additional data
-additional_data = pwt.additional_data(merge=True)
-
-# To understand the structure of the additional data
-pwt.describe_additional()
-
-# Print out a preview of the data
-print(df.head())
-```
-
 ## 📘 Method Overview & Output
 
 ### `PWTLoader.load_data()`----------------------------------------------
@@ -99,7 +76,7 @@ print(df.head())
 
 You can install PWTLoader directly via pip;
 ```bash
-pip install PWTLoader
+pip install PWTLoader==0.1.1
 ```
 
 To install the necessary dependencies, you can use the `requirements.txt` file:
@@ -114,6 +91,29 @@ pip install -r PWTLoader/requirements.txt
 - requests
 - beautifulsoup4
 - html5lib
+
+## Example 
+
+Here's an example of how to run PWTLoader
+
+```python
+from PWTLoader import PWTloader
+
+# Create an instance of the loader
+pwt = PWTloader()
+
+# Load the main dataset
+df = pwt.load_data()
+
+# If you want additional data
+additional_data = pwt.additional_data(merge=True)
+
+# To understand the structure of the additional data
+pwt.describe_additional()
+
+# Print out a preview of the data
+print(df.head())
+```
 
 
 ## Overview of Directory Structure

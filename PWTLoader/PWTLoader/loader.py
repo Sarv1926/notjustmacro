@@ -20,7 +20,13 @@ class PWTLoader():
             content=response.text
 
             #Parse HTML and extract JSON-LD Metadata
-            soup=BeautifulSoup(content,"xml")
+            try:
+                soup=BeautifulSoup(content,"lxml")
+            except:
+                try:
+                    soup=BeautifulSoup(content,"xml")
+                except:
+                    soup=BeautifulSoup(content,"html5lib")
             json_ld_tag=soup.find("script",{"type": "application/ld+json"})
             json_ld=json.loads(json_ld_tag.string)
             datasets=json_ld["distribution"]
@@ -93,7 +99,7 @@ class PWTLoader():
                       merged=pd.merge(merged,addlfiles[i]["df"],how="outer",on=["countrycode", "year"])
                       merged_files.append(i["name"])
             addlfiles.clear()
-            df1={'name':"Merged.dta","shape":merged.shape,"description":f"{merged_files.join(',')}"}
+            df1={'name':"Merged.dta","shape":merged.shape,"description":f"{merged_files.join(',')}","shape":merged.shape,"df":merged}
             addlfiles["Merged"]=df1                            
         return addlfiles
 
@@ -105,6 +111,7 @@ class PWTLoader():
          for key,val in addlfiles.items():
               name=val.get("name","NA")
               desc=val.get("description","no description")
+              shape=val.get("shape")
               print("\n")
               print(f" Dataset Key    : {key}")
               print(f" File Name      : {name}")
