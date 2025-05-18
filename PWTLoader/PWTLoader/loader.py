@@ -24,7 +24,7 @@ class PWTLoader():
                 soup=BeautifulSoup(content,"lxml")
             except:
                 try:
-                    soup=BeautifulSoup(content,"xml")
+                    soup=BeautifulSoup(content,"lxml")
                 except:
                     soup=BeautifulSoup(content,"html5lib")
             json_ld_tag=soup.find("script",{"type": "application/ld+json"})

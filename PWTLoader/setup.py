@@ -13,7 +13,7 @@ setup(
    install_requires=[
     "pandas",
     "beautifulsoup4",
-    "lxml",
+    "llxml",
     "requests",
     "html5lib"
 ],
@@ -23,7 +23,7 @@ setup(
     ],
     python_requires='>=3.7',
     license="MIT",
-    long_description=long_description,
+    long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     keywords="pwt, penn world table, economics, data loader, econometrics"
 )
